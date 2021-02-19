@@ -1,0 +1,222 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+}
+
+.header:before {
+  display: block;
+  float: right;
+  margin-top: 3em;
+  border-top: 2px solid silver;
+  width: 50%;
+  content: "";
+}
+
+.header h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 70px;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #fff;
+    background-color: #1f2029;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: none;
+}
+p{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #fff;
+  margin: 0;
+}
+.main img {
+  width: 30%;
+  position: relative;
+  margin-left: 20%;
+  padding-top: 15%;
+}
+
+
+.main-text {
+  float: right;
+  padding-top: 15%;
+}
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 1.2;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.2;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.nav{
+  position: relative;
+  width: 50%;
+  display: block;
+}
+
+.desc-btn:checked + label,
+.desc-btn:not(:checked) + label{
+  position: relative;
+  transition: all 200ms linear;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  color: #ffeba7;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #fff;
+  margin-right: 25px;
+  opacity: 0.5;
+}
+.desc-btn:checked + label{
+  opacity: 1;
+}
+.desc-btn:not(:checked) + label:hover {
+  opacity: 0.8;
+}
+.desc-sec {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  transition: all 250ms linear;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateY(20px);
+}
+.desc-sec.accor-2 {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+#desc-1:checked ~ .desc-sec.accor-1 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+#desc-2:checked ~ .desc-sec.accor-2 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.section-inline{
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+.section-inline p span{
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+hr {
+  width: 700px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.details img {
+  width: 50%;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 40px;
+  padding-bottom: 5px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px;
+  text-justify: inter-character;
+  background-color: #36394d;
+}
+
+.row {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+footer {
+  padding: 50px;
+  text-align: center;
+  color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 768px) {
+  .main img {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-left: 50%;
+  }
+
+  .main-text {
+    margin-left: 80%;
+    width: 600px;
+    position: relative;
+    left: 100%;
+    padding-bottom: 30%;
+  }
+
+  hr {
+    margin-top: 50%;
+  }
+
+  .details img {
+    width: 80%;
+    margin-left: 50%;
+  }
+
+  .column {
+    width: 100%;
+    margin-left: 40%;
+    text-align: center;
+  }
+
+  footer {
+    text-align: center;
+    margin-left: 40%;
+    width: 100%;
+  }
+}
